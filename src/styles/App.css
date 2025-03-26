@@ -13,10 +13,6 @@
   overflow: hidden;   /* Quitar el scrollbar */
 }
 
-#Subtitle {
-  margin-top: -0.8rem;
-}
-
 #Contenedor {
   background: linear-gradient(to right, #0a1214, #16282e, #1a2327); 
 }
@@ -204,7 +200,8 @@
 
 @media (max-width: 768px) {
   #Email ion-icon {
-    margin-left: 0;
+    position: relative;
+    margin-left: -2.3rem;
     margin-top: 4px;
   }
 
@@ -213,6 +210,16 @@
   }
 
   #Cartas {
-    margin: 0rem;
+    margin-top: 1.5rem;
+    margin-bottom: -9rem;
+    scale: 0.5;
+  }
+
+  .canvas-container {
+    position: absolute;
+    top: -8%;
+    right: -4%;
+    width: 100vw;
+    height: 100vh;
   }
 }
