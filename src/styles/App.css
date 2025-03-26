@@ -1,0 +1,218 @@
+@import "tailwindcss";
+
+.canvas-container {
+  position: absolute;
+  top: -8%;
+  right: 18%;
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  margin: 1rem;
+  overflow: hidden;   /* Quitar el scrollbar */
+}
+
+#Subtitle {
+  margin-top: -0.8rem;
+}
+
+#Contenedor {
+  background: linear-gradient(to right, #0a1214, #16282e, #1a2327); 
+}
+
+#Email ion-icon {
+  font-size: 2rem;
+  margin-left: 5rem;
+}
+
+#Email:hover {
+  color: #1292a8; /* Cambio de color al pasar el mouse */
+  transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#BotonNav {
+  margin-left: 0.1rem;
+}
+
+#BotonNav:hover{
+  color: #1292a8; /* Cambio de color al pasar el mouse */
+  transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#RedesSociales {
+  margin-top: -20.6rem;
+}
+
+#RedesSociales ion-icon {
+  font-size: 2.5rem;
+}
+
+#RedesSociales a:hover{
+  color: #1292a8; /* Cambio de color al pasar el mouse */
+  transform: scale(1.2); /* Efecto de aumento al pasar el mouse */
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#Cartas {
+  margin-right: -8rem;
+}
+
+#Proyectos {
+  margin-top: -4rem;
+  margin-left: -3rem;
+}
+
+#Punto {
+  position: absolute;
+  margin-top: 1rem;
+  margin-left: -1.2rem;
+}
+
+#Palito {
+  position: absolute;
+  margin-top: 2rem;
+  margin-left: -0.7rem;
+  margin-bottom: 50%;
+}
+
+.titulo-vertical {
+  writing-mode: vertical-rl; /* Texto en vertical de derecha a izquierda */
+  text-orientation: upright;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  left: -2rem; /* Ajusta según el espacio requerido */
+  top: 10%;
+}
+
+/* Estilos para los iconos */
+.icon-container {
+  display: flex;
+  flex-direction: column; /* Hace que el texto quede debajo */
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-container:hover {
+  transform: translateY(-5px); /* Levanta el icono al pasar el cursor */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.icon-name {
+  font-size: 8px;
+  text-align: center;
+  color: #11999e;
+}
+
+/* Mantiene los iconos en UNA SOLA FILA con más espacio */
+.grid-icons {
+  display: flex;
+  justify-content: space-around; /* Espaciado uniforme */
+}
+
+
+/* Estilo para "Tecnologías Utilizadas" */
+.tech-title {
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.tech-title:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil */
+}
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Animación de fadeInRight */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(350px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-fadeInRight {
+  animation: fadeInRight 2.5s ease-out forwards;
+}
+
+/* Animación para las imagenes */
+@keyframes slideInOut {
+  0% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+.animate-slideInOut {
+  animation: slideInOut 3s ease-in-out infinite;
+}
+
+/* Definir la animación de tipeo */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%; /* El texto completo aparece */
+  }
+  100% {
+    width: 0; /* El texto desaparece */
+  }
+}
+.animate-typing {
+  display: inline-block;
+  white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+  overflow: hidden;
+  animation: typing 4s steps(30) infinite alternate; /* Bucle indefinido que alterna */
+}
+
+@media (max-width: 768px) {
+  #Email ion-icon {
+    margin-left: 0;
+    margin-top: 4px;
+  }
+
+  #RedesSociales {
+    margin-top: -25rem;
+  }
+
+  #Cartas {
+    margin: 0rem;
+  }
+}
