@@ -234,15 +234,12 @@
   50% {
     width: 100%; /* El texto completo aparece */
   }
-  100% {
-    width: 0; /* El texto desaparece */
-  }
 }
 .animate-typing {
   display: inline-block;
   white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
   overflow: hidden;
-  animation: typing 4s steps(30) infinite alternate; /* Bucle indefinido que alterna */
+  animation: typing 3s steps(30); /* Bucle indefinido que alterna */
 }
 
 @media (max-width: 768px) {
@@ -257,7 +254,7 @@
   }
 
   #Cartas {
-    margin-top: 1.5rem;
+    margin-top: 4.4rem;
     margin-bottom: -9rem;
     scale: 0.5;
   }

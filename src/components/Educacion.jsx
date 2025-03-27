@@ -1,6 +1,6 @@
 const Education = ({ onHideEducation }) => {
   return (
-    <section className="w-full py-16 px-6 sm:px-12 md:px-16 xl:px-24 text-white bg-primary flex items-center scroll-snap-center">
+    <section className="w-full py-10 px-6 sm:px-12 md:px-16 xl:px-24 text-white bg-primary flex items-center scroll-snap-center">
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
         {/* Lado Izquierdo */}
         <div className="relative p-6 md:p-0 flex flex-col justify-between h-full">
@@ -16,22 +16,28 @@ const Education = ({ onHideEducation }) => {
               <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight">
                 Instituto Tecnológico de San Juan del Río
               </h2>
-              <img
-                src="/imgs/LogoTecNM.png"
-                className="size-34 animate-fadeIn"
-              />
+              <div className="flex flex-col md:flex-row md:items-center md:space-x-23">
+                <img
+                  src="/imgs/LogoTecNM.png"
+                  className="size-34 animate-fadeIn"
+                />
+                <p className="text-teal-400 text-2xl md:text-right pulse-glow">
+                  Título en trámite
+                </p>
+              </div>
             </div>
 
-            <p className="text-gray-300 text-lg leading-relaxed mt-4 animate-fadeIn">
+            <p className="text-gray-300 text-lg leading-relaxed mt-3 md:-mt-2">
               Estudié Ingeniería en Sistemas Computacionales en este campus,
               desarrollando habilidades para crear soluciones tecnológicas
               eficientes y adaptativas.
             </p>
 
             {/* Periodo y Botón */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-              <h1 className="text-lg md:text-[16px] text-teal-300 pulse-glow">
-                Periodo: Enero 2020 - Actualidad
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between animate-fadeIn">
+              <p className="text-md text-center md:text-[16px] text-teal-300 animate-pulse">Periodo :</p>
+              <h1 className="text-md text-center md:text-[16px] text-teal-300 animate-pulse">
+                <p className="inline text-white">Enero 2020 - Actualidad</p>
               </h1>
 
               <a
@@ -40,7 +46,7 @@ const Education = ({ onHideEducation }) => {
                   e.preventDefault();
                   onHideEducation();
                 }}
-                className="outline rounded-2xl outline-3 text-white font-semibold py-2 px-8 hover:bg-teal-500 hover:outline-none hover:scale-105 duration-300 shadow-teal-400/50 transition-all ease-in-out mt-4 sm:mt-0"
+                className="outline text-center rounded-2xl outline-3 text-white font-semibold py-2 px-8 hover:bg-teal-500 hover:outline-none hover:scale-105 duration-300 shadow-teal-400/50 transition-all ease-in-out mt-4 sm:mt-0"
               >
                 Volver
               </a>
@@ -49,7 +55,7 @@ const Education = ({ onHideEducation }) => {
         </div>
 
         {/* Lado Derecho (Imágenes en columna, del mismo tamaño) */}
-        <div className="flex flex-col items-center space-y-3">
+        <div className="flex flex-col items-center space-y-3 -mt-10 md:mt-0">
           <img
             src="/imgs/Itsjr.png"
             alt="Logo ITSJR"
