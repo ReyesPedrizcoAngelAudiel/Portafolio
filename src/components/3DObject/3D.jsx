@@ -1,30 +1,46 @@
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
-
 import Carro from "./3D-Carro";
 import CanvasLoader from "./Loading";
 
 const Objeto3D = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [loadedModel, setLoadedModel] = useState(false);
+
+  useEffect(() => {
+    // Detectar si es móvil
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    const cached = localStorage.getItem("3DModelLoaded");
+    if (cached) setLoadedModel(true);
+  }, []);
+
+  const handleModelLoad = () => {
+    localStorage.setItem("3DModelLoaded", "true");
+    setLoadedModel(true);
+  };
+
   return (
     <div className="canvas-container">
-      {/*<Leva />*/}
-      <Canvas camera={{ position: [20, 0.9, 20], fov: 46 }}>
-        <pointLight position={[10, 10, 10]} intensity={2.5} />
-        <Suspense fallback={<CanvasLoader />}>
-          <group position={[0, 0, 0]} rotation={[0,13.8,0]}>
-            <Carro 
-              scale={0.023} 
-              position={[-3,0,0]}/>
-            <Environment preset="night" />
+      <Canvas camera={{ position: [20, 0.9, 20] }}>
+        <Suspense fallback={<CanvasLoader onLoad={handleModelLoad} />}>
+          <Environment preset="city" background={false} blur={0.5} />
+          <group rotation={[0, 13.6, 0]}>
+            {loadedModel && <Carro />}
           </group>
           <OrbitControls
-            autoRotate={true}
-            autoRotateSpeed={0.3}
+            autoRotate={!isMobile}
+            autoRotateSpeed={0.4}
             enableZoom={false}
-            enableRotate={false}
-            minPolarAngle={Math.PI / 2.2}
-            maxPolarAngle={Math.PI / 2.2}
+            enableRotate={false && !isMobile}
+            enableDamping={false}
+            enablePan={false}
           />
         </Suspense>
       </Canvas>
