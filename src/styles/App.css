@@ -219,4 +219,8 @@
     margin-top: -6.8rem;
     margin-left: -3rem;
   }
+
+  .canvas-container{
+    display: none;
+  }
 }
