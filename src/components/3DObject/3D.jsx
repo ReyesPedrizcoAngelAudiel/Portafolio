@@ -19,15 +19,15 @@ const Objeto3D = () => {
 
   return (
     <div className="canvas-container">
-      <Canvas camera={{ position: [20, 0.9, 20] }}>
+      <Canvas camera={{ position: [10, 0, 35] }}>
         <Suspense fallback={<CanvasLoader onLoad={handleModelLoad} />}>
           <Environment preset="city" background={false} blur={0.5} />
-          <group rotation={[0, 13.6, 0]}>
+          <group rotation={[0.04, -12.8, 0]}>
             {<Carro />}
           </group>
           <OrbitControls
             autoRotate={true}
-            autoRotateSpeed={0.4}
+            autoRotateSpeed={0.18}
             enableZoom={false}
             enableRotate={false}
             enableDamping={false}

@@ -1,6 +1,6 @@
 import NavBar from "./Footer-NavBar";
 
-const Footer = ({ onShowAbout }) => {
+const Footer = ({ onShowAbout, onShowSkills, onShowEducation }) => {
   return (
     <div className="relative flex flex-row">
       <div className="basis-2/8 rounded-tr-2xl bg-[#242424] p-3 pl-5">
@@ -17,7 +17,7 @@ const Footer = ({ onShowAbout }) => {
       </div>
 
       {/* Barra de Navegación del footer */}
-      <NavBar onShowAbout={onShowAbout} />
+      <NavBar onShowAbout={onShowAbout} onShowSkills={onShowSkills} onShowEducation={onShowEducation}/>
     </div>
   );
 };

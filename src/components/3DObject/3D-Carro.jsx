@@ -5,7 +5,7 @@ export function Carro(props) {
   const { nodes, materials } = useGLTF('/models/audi_rs5-v2.gltf')
   return (
     <group {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 0]} scale={0.038}>
+      <group rotation={[-Math.PI / 2, 0, 0]} scale={0.043}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[2.701, 0, 0.809]}>
             <mesh

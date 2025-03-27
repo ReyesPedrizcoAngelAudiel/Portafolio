@@ -2,8 +2,8 @@
 
 .canvas-container {
   position: fixed;
-  top: -12%;
-  right: 25%;
+  top: 0%;
+  right: 15%;
   width: 100%;
   height: 100%;
 }
@@ -154,6 +154,21 @@
 }
 .animate-fadeInRight {
   animation: fadeInRight 2.5s ease-out forwards;
+}
+
+/* Animación de fadeInleft*/
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-fadeInLeft {
+  animation: fadeInLeft 2.5s ease-out forwards;
 }
 
 /* Animación de fadeInRightFoto */
