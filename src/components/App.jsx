@@ -23,6 +23,7 @@ function App() {
       {/* Objeto 3D siempre montado, pero oculto cuando está en AboutMe */}
       <div
         style={{
+          opacity: 0.45,
           visibility: showAbout ? "hidden" : "visible",
         }}
       >
@@ -33,6 +34,17 @@ function App() {
         {!showAbout && (
           <motion.div
             key="home"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.6, ease: "easeOut" },
+            }}
+            exit={{
+              opacity: 0,
+              x: -50,
+              transition: { duration: 0.4, ease: "easeIn" },
+            }}
             id="Contenedor"
             className="rounded-2xl"
           >
@@ -50,6 +62,17 @@ function App() {
         {showAbout && (
           <motion.div
             key="about"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.6, ease: "easeOut" },
+            }}
+            exit={{
+              opacity: 0,
+              x: 50,
+              transition: { duration: 0.4, ease: "easeIn" },
+            }}
             className="pl-4 pr-4"
           >
             <AboutMe onHideAbout={handleHideAbout} />

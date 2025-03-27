@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .canvas-container {
-  position: absolute;
+  position: fixed;
   top: -12%;
   right: 25%;
   width: 100%;
@@ -14,7 +14,7 @@
 }
 
 #Contenedor {
-  background: linear-gradient(to right, #0a1214, #16282e, #1a2327); 
+  background: linear-gradient(to right, #0a1214, #16282e, #1a2327);
 }
 
 #Email ion-icon {
