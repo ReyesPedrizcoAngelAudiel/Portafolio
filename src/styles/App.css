@@ -126,7 +126,7 @@
   background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil */
 }
 
-/* Animación de fade-in */
+/* Animación de fadeIn */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -156,7 +156,39 @@
   animation: fadeInRight 2.5s ease-out forwards;
 }
 
-/* Animación para las imagenes */
+/* Animación de fadeInRightFoto */
+@keyframes fadeInRightFoto {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-fadeInRightFoto {
+  animation: fadeInRightFoto 2.5s ease-out forwards;
+}
+
+@keyframes pulse-glow {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 2px #046164, 0 0 5px #048a8f;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 2px #046164, 0 0 5px #048a8f;
+  }
+}
+.pulse-glow {
+  animation: pulse-glow 1.5s infinite ease-in-out;
+}
+
+/* Animación para las imagenes Cartas*/
 @keyframes slideInOut {
   0% {
     opacity: 0;

@@ -5,17 +5,8 @@ import Carro from "./3D-Carro";
 import CanvasLoader from "./Loading";
 
 const Objeto3D = () => {
-  const [isMobile, setIsMobile] = useState(false);
   const [loadedModel, setLoadedModel] = useState(false);
-
-  useEffect(() => {
-    // Detectar si es móvil
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
+  
   useEffect(() => {
     const cached = localStorage.getItem("3DModelLoaded");
     if (cached) setLoadedModel(true);
@@ -32,13 +23,13 @@ const Objeto3D = () => {
         <Suspense fallback={<CanvasLoader onLoad={handleModelLoad} />}>
           <Environment preset="city" background={false} blur={0.5} />
           <group rotation={[0, 13.6, 0]}>
-            {loadedModel && <Carro />}
+            {<Carro />}
           </group>
           <OrbitControls
-            autoRotate={!isMobile}
+            autoRotate={true}
             autoRotateSpeed={0.4}
             enableZoom={false}
-            enableRotate={false && !isMobile}
+            enableRotate={false}
             enableDamping={false}
             enablePan={false}
           />

@@ -13,6 +13,7 @@
     "@react-three/drei": "^10.0.5",
     "@react-three/fiber": "^9.1.0",
     "@tailwindcss/vite": "^4.0.15",
+    "framer-motion": "^12.6.2",
     "lamina": "^1.1.23",
     "leva": "^0.10.0",
     "react": "^19.0.0",
