@@ -9,7 +9,7 @@ import RedesSociales from "./RedSocial";
 import Objeto3D from "./3DObject/3D";
 import Cartas from "./Cartas/Cartas";
 
-// Componente Acerca de mí
+// Componentes Ocultos
 import AboutMe from "./AboutMe";
 import Skills from "./Skills";
 import Education from "./Educacion";
@@ -27,7 +27,7 @@ function App() {
 
   const handleShowEducation = () => setShowEducation(true);
   const handleHideEducation = () => setShowEducation(false);
-
+  
   return (
     <>
       {/* Objeto 3D siempre montado, pero oculto */}

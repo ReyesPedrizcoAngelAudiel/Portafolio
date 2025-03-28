@@ -12,14 +12,14 @@ const Education = ({ onHideEducation }) => {
 
           {/* Título y Descripción */}
           <div>
-            <div className="grid grid-cols-1 items-center ml-8 animate-fadeInLeft">
+            <div className="grid grid-cols-1 items-center ml-8">
               <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight">
                 Instituto Tecnológico de San Juan del Río
               </h2>
               <div className="flex flex-col md:flex-row md:items-center md:space-x-23">
                 <img
                   src="/imgs/LogoTecNM.png"
-                  className="size-34 animate-fadeIn"
+                  className="size-34 scale-up-center"
                 />
                 <p className="text-teal-400 text-2xl md:text-right pulse-glow">
                   Título en trámite
@@ -27,15 +27,20 @@ const Education = ({ onHideEducation }) => {
               </div>
             </div>
 
-            <p className="text-gray-300 text-lg leading-relaxed mt-3 md:-mt-2">
-              Estudié Ingeniería en Sistemas Computacionales en este campus,
-              desarrollando habilidades para crear soluciones tecnológicas
-              eficientes y adaptativas.
+            <p className="text-gray-300 text-lg leading-relaxed mt-3 md:-mt-2 animate-fadeIn">
+              Orgulloso de haber obtenido el <p className="inline text-sky-400">1er Lugar</p> en {""}
+              <a class="text-sky-400 no-underline hover:underline after:content-['_↗']" href="https://surguanajuato.tecnm.mx/innovatecnm.html">
+                InovaTecNM 2024
+              </a>
+              , celebrado en Pachuca, Hidalgo. Durante este evento de
+              innovación, competimos contra otros tecnológicos, y logré superarme como programador.
             </p>
 
             {/* Periodo y Botón */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between animate-fadeIn">
-              <p className="text-md text-center md:text-[16px] text-teal-300 animate-pulse">Periodo :</p>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between animate-fadeInLeft">
+              <p className="text-md text-center md:text-[16px] text-teal-300 animate-pulse">
+                Periodo :
+              </p>
               <h1 className="text-md text-center md:text-[16px] text-teal-300 animate-pulse">
                 <p className="inline text-white">Enero 2020 - Actualidad</p>
               </h1>

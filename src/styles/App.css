@@ -10,7 +10,7 @@
 
 #root {
   margin: 1rem;
-  overflow: hidden;   /* Quitar el scrollbar */
+  overflow: hidden; /* Quitar el scrollbar */
 }
 
 #Contenedor {
@@ -32,7 +32,7 @@
   margin-left: 0.1rem;
 }
 
-#BotonNav:hover{
+#BotonNav:hover {
   color: #1292a8; /* Cambio de color al pasar el mouse */
   transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
   transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -46,7 +46,7 @@
   font-size: 2.5rem;
 }
 
-#RedesSociales a:hover{
+#RedesSociales a:hover {
   color: #1292a8; /* Cambio de color al pasar el mouse */
   transform: scale(1.2); /* Efecto de aumento al pasar el mouse */
   transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -112,7 +112,6 @@
   justify-content: space-around; /* Espaciado uniforme */
 }
 
-
 /* Estilo para "Tecnologías Utilizadas" */
 .tech-title {
   font-size: 12px;
@@ -169,6 +168,32 @@
 }
 .animate-fadeInLeft {
   animation: fadeInLeft 2.5s ease-out forwards;
+}
+
+/* Animación de los iconos */
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.scale-up-center {
+  animation: scale-up-center 1s;
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(-150px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.slide-bottom {
+  animation: slide-bottom 2s linear both;
 }
 
 /* Animación de fadeInRightFoto */
@@ -264,7 +289,7 @@
     margin-left: -3rem;
   }
 
-  .canvas-container{
+  .canvas-container {
     display: none;
   }
 }

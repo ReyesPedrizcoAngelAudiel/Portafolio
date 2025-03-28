@@ -9,9 +9,9 @@ const images = [
 
 const iconos = [
   { src: "/assets/icons/mariaDB.svg", alt: "MariaDB" },
-  { src: "/assets/icons/laravel.svg", alt: "Laravel" },
+  { src: "/assets/icons/Laravel-Dark.svg", alt: "Laravel" },
   { src: "/assets/icons/javascript.svg", alt: "Javascript" },
-  { src: "/assets/icons/php.svg", alt: "Php" },
+  { src: "/assets/icons/Php-Dark.svg", alt: "Php" },
 ];
 
 const Cetech = () => {
@@ -49,7 +49,9 @@ const Cetech = () => {
               />
               {/* Texto que se muestra encima de la imagen */}
               <div className="absolute inset-0 p-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
-                <span className="text-sky-400 text-4xl font-bold">Visualizar proyecto</span>
+                <span className="text-sky-400 text-4xl font-bold">
+                  Visualizar proyecto
+                </span>
               </div>
             </div>
           </a>
@@ -67,6 +69,15 @@ const Cetech = () => {
                   src={icon.src}
                   alt={icon.alt}
                   className="w-12 h-10" // Tamaño de los iconos
+                  style={
+                    icon.alt === "MariaDB"
+                      ? {
+                          background: "#242938",
+                          borderRadius: "25%",
+                          padding: "5px",
+                        }
+                      : {}
+                  }
                 />
                 <p className="icon-name">{icon.alt}</p>{" "}
                 {/* Nombre debajo del icono */}

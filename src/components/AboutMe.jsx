@@ -53,10 +53,10 @@ const AboutMe = ({ onHideAbout }) => {
             Volver
           </a>
           {/* Teléfono */}
-          <p className="flex flex-row items-center gap-6 font-bold text-2xl text-teal-600 justify-center sm:justify-end sm:ml-55 pulse-glow">
+          <a href="https://wa.me/+524272895865" className="flex flex-row items-center gap-6 font-bold text-2xl text-teal-600 justify-center sm:justify-end sm:ml-55 pulse-glow">
             427 - 289 - 5865
             <ion-icon name="logo-whatsapp" size="large"></ion-icon>
-          </p>
+          </a>
 
         </div>
       </div>

@@ -69,6 +69,15 @@ const BondaFarmacia = () => {
                   src={icon.src}
                   alt={icon.alt}
                   className="w-12 h-10" // Tamaño de los iconos
+                  style={
+                    icon.alt === "Server"
+                      ? {
+                          background: "#242938",
+                          borderRadius: "25%",
+                          padding: "2px",
+                        }
+                      : {}
+                  }
                 />
                 <p className="icon-name">{icon.alt}</p>{" "}
                 {/* Nombre debajo del icono */}

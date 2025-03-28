@@ -10,7 +10,7 @@ const images = [
 const iconos = [
   { src: "/assets/icons/mysql.svg", alt: "MySQL" },
   { src: "/assets/icons/express.svg", alt: "Express" },
-  { src: "/assets/icons/react.svg", alt: "React" },
+  { src: "/assets/icons/React-Dark.svg", alt: "React" },
   { src: "/assets/icons/nodejs.svg", alt: "Node.js" },
 ];
 
@@ -68,7 +68,7 @@ const Carta_IASmartP = () => {
                   alt={icon.alt}
                   className="w-12 h-12" // Tamaño de los iconos
                 />
-                <p className="icon-name">{icon.alt}</p>{" "}
+                <p className="icon-name">{icon.alt}</p>
                 {/* Nombre debajo del icono */}
               </div>
             ))}
